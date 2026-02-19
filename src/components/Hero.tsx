@@ -12,45 +12,58 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-background pt-16">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       {/* Subtle navy top strip */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-accent-blue" />
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent-blue z-10" />
 
-      <div className="max-w-6xl mx-auto px-6 w-full py-24">
-        <div ref={ref} className="section-reveal flex flex-col items-center text-center max-w-3xl mx-auto">
-          {/* Photo — di atas nama */}
-          <div className="relative mb-8">
-            <div className="absolute inset-0 rounded-full bg-accent-blue opacity-15 scale-110" />
-            <img
-              src={profileImg}
-              alt="Professional headshot"
-              className="relative w-36 h-36 md:w-44 md:h-44 object-cover rounded-full shadow-[var(--shadow-card)] border-4 border-background"
-            />
+      {/* Full-bleed photo — right side */}
+      <div className="absolute inset-0">
+        <img
+          src={profileImg}
+          alt="Profile"
+          className="absolute right-0 top-0 h-full w-[55%] object-cover object-top"
+        />
+        {/* Gradient overlay: background on left, transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/10" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      </div>
+
+      {/* Text content — left side */}
+      <div ref={ref} className="section-reveal relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-16">
+        <div className="max-w-xl">
+          {/* Name with line accent */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-0.5 bg-accent-blue" />
+            <span className="text-sm font-semibold text-accent-blue tracking-widest uppercase">
+              [Your Full Name]
+            </span>
           </div>
 
-          {/* Text content */}
-          <p className="text-sm font-semibold tracking-widest text-accent-blue uppercase mb-4">
-            Professional Portfolio
-          </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight mb-4">
-            [Your Full Name]
+          {/* Big editorial tagline */}
+          <h1 className="text-6xl md:text-7xl font-extrabold text-primary leading-[1.05] mb-8 tracking-tight">
+            Business<br />
+            <span className="text-accent-blue">Analyst.</span>
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground mb-6">
-            Business Analyst <span className="text-border mx-2">|</span> Software Engineer{" "}
-            <span className="text-border mx-2">|</span> Project Manager
+
+          {/* Subtitle */}
+          <p className="text-lg font-medium text-muted-foreground mb-3">
+            Software Engineer · Project Manager
           </p>
-          <p className="text-base text-muted-foreground max-w-lg leading-relaxed mb-10">
+          <p className="text-base text-muted-foreground leading-relaxed mb-10 max-w-md">
             Delivering data-driven insights and strategic solutions that bridge business objectives
             with technical execution to drive measurable organizational growth.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4">
             <a
               href="#experience"
               onClick={(e) => {
                 e.preventDefault();
                 document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold text-sm rounded-md hover:opacity-90 transition-opacity shadow-sm"
+              className="inline-flex items-center px-7 py-3.5 bg-primary text-primary-foreground font-semibold text-sm rounded-md hover:opacity-90 transition-opacity shadow-sm"
             >
               View Experience
             </a>
@@ -60,12 +73,18 @@ export default function Hero() {
                 e.preventDefault();
                 document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="inline-flex items-center px-6 py-3 border border-primary text-primary font-semibold text-sm rounded-md hover:bg-secondary transition-colors"
+              className="inline-flex items-center px-7 py-3.5 border border-primary text-primary font-semibold text-sm rounded-md hover:bg-secondary transition-colors"
             >
               Contact Me
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 animate-bounce">
+        <div className="w-0.5 h-8 bg-accent-blue/40 rounded-full" />
+        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue/60" />
       </div>
     </section>
   );
