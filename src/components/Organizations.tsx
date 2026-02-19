@@ -45,11 +45,11 @@ export default function Organizations() {
   }, []);
 
   return (
-    <section id="organizations" className="bg-background py-24">
+    <section id="organizations" className="bg-background py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <div ref={(el) => { refs.current[0] = el; }} className="section-reveal mb-12">
-          <h2 className="text-3xl font-bold text-primary mt-2 mb-3">Organizational Experience</h2>
-          <div className="w-12 h-1 bg-accent-blue rounded" />
+        <div ref={(el) => { refs.current[0] = el; }} className="section-reveal mb-10 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mt-2 mb-3">Organizational Experience</h2>
+          <div className="w-10 md:w-12 h-1 bg-accent-blue rounded" />
         </div>
 
         <div className="flex flex-col gap-6">
@@ -57,27 +57,27 @@ export default function Organizations() {
             <div
               key={i}
               ref={(el) => { refs.current[i + 1] = el; }}
-              className="section-reveal border border-border rounded-lg p-7 hover:shadow-[var(--shadow-card)] transition-shadow"
+              className="section-reveal border border-border rounded-lg p-5 md:p-7 hover:shadow-[var(--shadow-card)] transition-shadow"
               style={{ transitionDelay: `${i * 0.12}s` }}
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
-                <div className="flex items-start gap-4">
-                  <div className="mt-0.5 w-10 h-10 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
-                    <Users size={17} className="text-primary-foreground" />
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="mt-0.5 w-9 h-9 md:w-10 md:h-10 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                    <Users size={16} className="text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-primary text-base leading-tight">{org.name}</h3>
-                    <p className="text-sm font-semibold text-accent-blue mt-1">{org.role}</p>
+                    <h3 className="font-bold text-primary text-base md:text-lg leading-tight">{org.name}</h3>
+                    <p className="text-xs md:text-sm font-semibold text-accent-blue mt-1">{org.role}</p>
                   </div>
                 </div>
-                <span className="inline-flex items-center px-3 py-1.5 rounded-md text-xs font-semibold bg-accent-blue-light text-accent-blue whitespace-nowrap self-start sm:self-auto">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] md:text-xs font-semibold bg-accent-blue-light text-accent-blue whitespace-nowrap self-start">
                   {org.year}
                 </span>
               </div>
-              <ul className="space-y-2.5 pl-1">
+              <ul className="space-y-3 pl-1">
                 {org.contributions.map((c, j) => (
-                  <li key={j} className="flex items-start gap-3 text-sm text-foreground leading-relaxed">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  <li key={j} className="flex items-start gap-3 text-xs md:text-sm text-foreground leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                     {c}
                   </li>
                 ))}

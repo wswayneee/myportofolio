@@ -33,11 +33,10 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-background shadow-[var(--shadow-navbar)] border-b border-border"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
@@ -89,19 +88,23 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
       </div>
 
       {/* Mobile Dropdown */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background border-t border-border px-6 py-4 flex flex-col gap-3">
+      <div
+        className={`md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <div className="px-6 py-6 flex flex-col gap-4">
           {navItems.map((item) => (
             <button
               key={item.href}
               onClick={() => handleNav(item.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary text-left transition-colors"
+              className="text-base font-semibold text-muted-foreground hover:text-accent-blue transition-colors text-left flex items-center justify-between group"
             >
               {item.label}
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-blue opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
           ))}
         </div>
-      )}
+      </div>
     </header>
   );
 }

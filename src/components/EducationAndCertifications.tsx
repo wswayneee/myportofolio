@@ -41,32 +41,32 @@ export default function EducationAndCertifications() {
     }, []);
 
     return (
-        <section id="education" className="bg-background py-24">
+        <section id="education" className="bg-background py-20 md:py-24">
             <div className="max-w-6xl mx-auto px-6">
                 <div
                     ref={(el) => { refs.current[0] = el; }}
-                    className="section-reveal mb-12"
+                    className="section-reveal mb-10 md:mb-12"
                 >
-                    <span className="text-xs font-bold tracking-widest text-accent-blue uppercase">Academic & Credentials</span>
-                    <h2 className="text-3xl font-bold text-primary mt-2 mb-3">Education & Certifications</h2>
-                    <div className="w-12 h-1 bg-accent-blue rounded" />
+                    <span className="text-[10px] md:text-xs font-bold tracking-widest text-accent-blue uppercase">Academic & Credentials</span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-primary mt-2 mb-3">Education & Certifications</h2>
+                    <div className="w-10 md:w-12 h-1 bg-accent-blue rounded" />
                 </div>
 
-                <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-12 md:gap-16">
                     {/* Education Column */}
                     <div ref={(el) => { refs.current[1] = el; }} className="section-reveal">
                         <div className="flex items-center gap-2 mb-6">
-                            <GraduationCap size={20} className="text-accent-blue" />
-                            <h3 className="font-bold text-primary text-xl">Education</h3>
+                            <GraduationCap size={18} className="text-accent-blue" />
+                            <h3 className="font-bold text-primary text-lg md:text-xl">Education</h3>
                         </div>
                         <div className="space-y-6">
                             {educationData.map((edu, i) => (
-                                <div key={i} className="relative pl-8 border-l-2 border-border pb-2">
+                                <div key={i} className="relative pl-6 md:pl-8 border-l-2 border-border pb-2">
                                     <div className="absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-accent-blue border-4 border-background" />
-                                    <h4 className="font-bold text-primary text-lg leading-tight">{edu.institution}</h4>
-                                    <p className="text-sm font-medium text-foreground mt-1">{edu.degree}</p>
-                                    <p className="text-xs font-bold text-accent-blue mt-1 uppercase tracking-wider">{edu.year}</p>
-                                    <p className="text-sm text-muted-foreground mt-3 italic">{edu.highlight}</p>
+                                    <h4 className="font-bold text-primary text-base md:text-lg leading-tight">{edu.institution}</h4>
+                                    <p className="text-xs md:text-sm font-medium text-foreground mt-1">{edu.degree}</p>
+                                    <p className="text-[10px] md:text-xs font-bold text-accent-blue mt-1 uppercase tracking-wider">{edu.year}</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground mt-3 italic">{edu.highlight}</p>
                                 </div>
                             ))}
                         </div>
@@ -75,17 +75,17 @@ export default function EducationAndCertifications() {
                     {/* Certifications Column */}
                     <div ref={(el) => { refs.current[2] = el; }} className="section-reveal section-reveal-delay-1">
                         <div className="flex items-center gap-2 mb-6">
-                            <Award size={20} className="text-accent-blue" />
-                            <h3 className="font-bold text-primary text-xl">Certifications</h3>
+                            <Award size={18} className="text-accent-blue" />
+                            <h3 className="font-bold text-primary text-lg md:text-xl">Certifications</h3>
                         </div>
-                        <div className="grid gap-4">
+                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
                             {certifications.map((c, i) => (
-                                <div key={i} className="flex flex-col gap-2 p-5 rounded-lg bg-accent-blue-light/40 border border-accent-blue/10 hover:border-accent-blue/30 transition-all hover:translate-x-1">
-                                    <div className="flex items-center justify-between gap-4">
-                                        <span className="text-sm font-semibold text-primary/90">{c.name}</span>
-                                        <span className="text-xs font-black text-accent-blue bg-white/60 px-2 py-1 rounded shadow-sm whitespace-nowrap">{c.year}</span>
+                                <div key={i} className="flex flex-col gap-2 p-4 md:p-5 rounded-lg bg-accent-blue-light/40 border border-accent-blue/10 hover:border-accent-blue/30 transition-all hover:translate-x-1">
+                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 md:gap-4">
+                                        <span className="text-xs md:text-sm font-semibold text-primary/90">{c.name}</span>
+                                        <span className="text-[10px] md:text-xs font-black text-accent-blue bg-white/60 px-2 py-1 rounded shadow-sm whitespace-nowrap self-start sm:self-auto">{c.year}</span>
                                     </div>
-                                    {c.desc && <p className="text-xs text-muted-foreground leading-relaxed italic">{c.desc}</p>}
+                                    {c.desc && <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed italic">{c.desc}</p>}
                                 </div>
                             ))}
                         </div>
