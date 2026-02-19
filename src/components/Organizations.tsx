@@ -3,32 +3,31 @@ import { Users } from "lucide-react";
 
 const organizations = [
   {
-    name: "BEM (Badan Eksekutif Mahasiswa) Universitas Indonesia",
-    role: "Head of Research & Development Division",
-    year: "2020 – 2021",
+    name: "Student Association of Computer Science",
+    role: "President",
+    year: "August 2024 – December 2024",
     contributions: [
-      "Led a 15-member team in producing 8 policy research papers adopted by the university board.",
-      "Organized a national student leadership summit attended by 500+ participants from 30 universities.",
-      "Coordinated inter-organization collaboration programs with government and private sector partners.",
+      "Established a mentorship program for first-year students, matching them with upper-year mentors to provide academic and personal support, resulting in improved student retention rates.",
+      "Increased student participation in events and activities by 90% by working with the executive team to develop engaging initiatives that resonated with the student body.",
     ],
   },
   {
-    name: "AIESEC Indonesia – Local Committee UI",
-    role: "Vice President – Business Development",
-    year: "2019 – 2020",
+    name: "Bank Indonesia",
+    role: "Genbi Parliamentary",
+    year: "January 2023 – December 2023",
     contributions: [
-      "Secured 12 corporate partnerships generating IDR 150M in sponsorship revenue for exchange programs.",
-      "Managed outreach and sales strategies for international internship exchange programs.",
-      "Mentored 25+ junior members in professional skills and project management competencies.",
+      "Managed GenBI community service events, collaborating with government and Paragon Corporation to empower remote communities through education (math, English, civics) and donations of essential supplies, directly addressing local needs.",
+      "Executed financial literacy campaigns for 'Cinta Bangga Paham Rupiah' and QRIS payment systems, raising awareness about currency preservation, counterfeit detection, and digital payment adoption among UMKM in North Sulawesi.",
+      "Organized outreach programs in remote areas, including road repairs, medical check-ups, and environmental cleanups with Lembeh Island Resort, creating measurable improvements in community infrastructure and sustainability.",
     ],
   },
   {
-    name: "Computer Science Student Association (ILKOMUNSCI)",
-    role: "Secretary General",
-    year: "2018 – 2019",
+    name: "Google Developer Student Club (GDSC)",
+    role: "Core Team AI and Public Relations ",
+    year: "August 2022 – August 2023",
     contributions: [
-      "Oversaw administrative and operational functions of a 200+ member organization.",
-      "Initiated the first annual Tech Innovation Fair, attracting 800 attendees and 15 industry sponsors.",
+      "Led weekly AI training sessions for GDSC members, teaching AI fundamentals, basic coding, and project development. Reviewed lecture content after each session, ensuring members' understanding and contributing to the successful completion of their projects.",
+      "Promoted GDSC events and initiatives as a Public Relations representative, raising awareness within the faculty through targeted announcements and campaigns, resulting in increased participation and community growth within the faculty.",
     ],
   },
 ];
@@ -49,7 +48,6 @@ export default function Organizations() {
     <section id="organizations" className="bg-background py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div ref={(el) => { refs.current[0] = el; }} className="section-reveal mb-12">
-          <span className="text-xs font-bold tracking-widest text-accent-blue uppercase">Leadership</span>
           <h2 className="text-3xl font-bold text-primary mt-2 mb-3">Organizational Experience</h2>
           <div className="w-12 h-1 bg-accent-blue rounded" />
         </div>

@@ -3,18 +3,11 @@ import { GraduationCap } from "lucide-react";
 
 const educationData = [
   {
-    institution: "Universitas Indonesia",
-    degree: "Bachelor of Science in Computer Science",
-    year: "2018 – 2022",
+    institution: "Universitas Klabat",
+    degree: "Bachelor of Computer Science - Major in Informatics",
+    year: "2021 – 2024",
     highlight:
-      "Graduated with Cum Laude distinction. Thesis on machine learning-based predictive analytics for supply chain optimization. Member of Computer Science Student Association.",
-  },
-  {
-    institution: "SMA Negeri 1 Jakarta",
-    degree: "Senior High School – Science Track",
-    year: "2015 – 2018",
-    highlight:
-      "Top 5% of graduating class. National Science Olympiad participant in Mathematics and Physics.",
+      "Cumulative GPA 3.79/4.00 - Magna CumLaude.",
   },
 ];
 

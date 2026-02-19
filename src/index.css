@@ -24,6 +24,10 @@
     --accent-blue: 213 85% 55%;
     --accent-blue-light: 213 85% 94%;
 
+    /* Red accent */
+    --accent-red: 0 84% 60%;
+    --accent-red-light: 0 84% 96%;
+
     --secondary: 220 15% 95%;
     --secondary-foreground: 220 25% 20%;
 
@@ -177,6 +181,22 @@
 
   .border-accent-blue {
     border-color: hsl(var(--accent-blue));
+  }
+
+  .bg-accent-red {
+    background-color: hsl(var(--accent-red));
+  }
+
+  .text-accent-red {
+    color: hsl(var(--accent-red));
+  }
+
+  .bg-accent-red-light {
+    background-color: hsl(var(--accent-red-light));
+  }
+
+  .border-accent-red {
+    border-color: hsl(var(--accent-red));
   }
 }
 

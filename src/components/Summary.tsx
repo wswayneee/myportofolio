@@ -16,30 +16,22 @@ export default function Summary() {
     <section id="summary" className="bg-section-alt py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div ref={ref} className="section-reveal">
-          <span className="text-xs font-bold tracking-widest text-accent-blue uppercase">About Me</span>
-          <h2 className="text-3xl font-bold text-primary mt-2 mb-8">Professional Summary</h2>
+
+          <h2 className="text-5xl font-bold text-primary mt-2 mb-8 leading-tight">
+            Get to <br /> Know Me
+          </h2>
           <div className="w-12 h-1 bg-accent-blue rounded mb-10" />
           <div className="max-w-3xl">
             <p className="text-base text-foreground leading-8 font-light">
-              A results-driven professional with over{" "}
-              <span className="font-semibold text-primary">5 years of experience</span> spanning
-              business analysis, software engineering, and project management across fast-paced
-              corporate environments. Adept at translating complex business requirements into
-              actionable technical solutions, driving cross-functional alignment, and delivering
-              projects within scope, schedule, and budget constraints.
+              I am an informatics graduate with professional experience and a strong interest in{" "}
+              <span className="font-semibold text-primary">Frontend Development, Project Management, Social Media, and Data Analysis</span>.
+              I have the ability to develop user-oriented solutions, manage projects efficiently, and analyze data to support accurate and strategic decision-making.
+              I thrive in dynamic, fast-paced environments and consistently meet tight deadlines through strong time management skills.
             </p>
             <p className="text-base text-foreground leading-8 font-light mt-5">
-              Demonstrated expertise in{" "}
-              <span className="font-semibold text-primary">data analytics, process optimization</span>,
-              and agile methodologies, consistently delivering measurable improvements in operational
-              efficiency and stakeholder satisfaction. Possesses a strategic mindset combined with
-              strong interpersonal skills, enabling effective collaboration with C-level executives,
-              technical teams, and external partners alike.
-            </p>
-            <p className="text-base text-foreground leading-8 font-light mt-5">
-              Committed to continuous professional development and leveraging emerging technologies to
-              build scalable, high-impact solutions that advance organizational objectives and create
-              sustainable competitive advantage.
+              With solid leadership, effective communication, and strong teamwork abilities, I actively contribute to achieving goals and delivering measurable results.
+              As an adaptable, proactive, and results-driven professional, I am committed to continuous learning and ready to provide creative, analytical, and agile solutions
+              that add value and drive meaningful impact for organizational growth and success.
             </p>
           </div>
         </div>

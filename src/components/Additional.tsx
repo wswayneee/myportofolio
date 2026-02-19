@@ -1,36 +1,30 @@
 import { useEffect, useRef } from "react";
 
-const technicalSkills = [
-  "Python", "JavaScript", "TypeScript", "React", "Node.js", "SQL",
-  "PostgreSQL", "MongoDB", "REST APIs", "Git", "Docker", "Kubernetes",
+const TechnicalSkill = [
+  "React Native", "JavaScript", "REST API", "SQL", "Node.js", "Figma",
+  "HTML", "CSS", "Social Media Specialist", "Data Analysis", "Project Management"
 ];
 
 const softSkills = [
-  "Strategic Thinking", "Stakeholder Management", "Problem Solving",
-  "Leadership", "Communication", "Analytical Thinking", "Team Collaboration", "Adaptability",
+  "Leadership", "Effective Communication", "Team Collaboration", "Time Management",
+  "Problem Solving", "Adaptability", "Proactive", "Strategic Decision-Making",
 ];
 
 const tools = [
   { name: "Power BI", category: "Analytics" },
-  { name: "Tableau", category: "Analytics" },
-  { name: "Jira", category: "PM" },
-  { name: "Confluence", category: "PM" },
+  { name: "Microsoft Excel", category: "Analytics" },
   { name: "Figma", category: "Design" },
+  { name: "Canva", category: "Design" },
+  { name: "CapCut / Premiere", category: "Video" },
   { name: "VS Code", category: "Dev" },
-  { name: "Postman", category: "Dev" },
-  { name: "AWS", category: "Cloud" },
-  { name: "GCP", category: "Cloud" },
+  { name: "Git / GitHub", category: "Dev" },
   { name: "MS Office Suite", category: "Productivity" },
+  { name: "Trello / Jira", category: "PM" },
   { name: "Notion", category: "Productivity" },
-  { name: "Slack", category: "Comm" },
+  { name: "Google Analytics", category: "Analytics" },
+  { name: "Antigravity", category: "AI" },
 ];
 
-const certifications = [
-  { name: "AWS Certified Solutions Architect – Associate", year: "2023" },
-  { name: "Google Project Management Certificate", year: "2022" },
-  { name: "Certified Business Analysis Professional (CBAP)", year: "2022" },
-  { name: "Scrum Master Certification (PSM I)", year: "2021" },
-];
 
 export default function Additional() {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -58,7 +52,7 @@ export default function Additional() {
           <div ref={(el) => { refs.current[1] = el; }} className="section-reveal bg-background border border-border rounded-lg p-7 shadow-[var(--shadow-card)]">
             <h3 className="font-bold text-primary text-base mb-5">Technical Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {technicalSkills.map((s) => (
+              {TechnicalSkill.map((s) => (
                 <span
                   key={s}
                   className="px-3 py-1.5 text-xs font-semibold rounded-md bg-primary text-primary-foreground"
@@ -97,18 +91,6 @@ export default function Additional() {
             </div>
           </div>
 
-          {/* Certifications */}
-          <div ref={(el) => { refs.current[4] = el; }} className="section-reveal section-reveal-delay-3 bg-background border border-border rounded-lg p-7 shadow-[var(--shadow-card)] md:col-span-2">
-            <h3 className="font-bold text-primary text-base mb-5">Certifications</h3>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {certifications.map((c) => (
-                <div key={c.name} className="flex items-center justify-between gap-4 px-4 py-3 rounded-md bg-accent-blue-light border border-accent-blue/20">
-                  <span className="text-sm font-medium text-primary">{c.name}</span>
-                  <span className="text-xs font-bold text-accent-blue whitespace-nowrap">{c.year}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

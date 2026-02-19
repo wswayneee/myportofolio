@@ -28,7 +28,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6">
         <div ref={ref} className="section-reveal">
           <span className="text-xs font-bold tracking-widest text-accent-blue uppercase">Get In Touch</span>
-          <h2 className="text-3xl font-bold text-primary mt-2 mb-3">Contact</h2>
+          <h2 className="text-3xl font-bold text-primary mt-2 mb-3">Contact Me</h2>
           <div className="w-12 h-1 bg-accent-blue rounded mb-12" />
 
           <div className="grid md:grid-cols-2 gap-14">
@@ -42,7 +42,7 @@ export default function Contact() {
 
               <div className="flex flex-col gap-5">
                 <a
-                  href="mailto:yourname@email.com"
+                  href="mailto:waynestelylamansiang@gmail.com"
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-10 h-10 rounded-md bg-accent-blue-light flex items-center justify-center group-hover:bg-accent-blue transition-colors">
@@ -50,12 +50,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide font-medium">Email</p>
-                    <p className="text-sm font-semibold text-primary">yourname@email.com</p>
+                    <p className="text-sm font-semibold text-primary">waynestelylamansiang@gmail.com</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="http://www.linkedin.com/in/wayne-stely"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -65,12 +65,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide font-medium">LinkedIn</p>
-                    <p className="text-sm font-semibold text-primary">linkedin.com/in/yourprofile</p>
+                    <p className="text-sm font-semibold text-primary">linkedin.com/in/wayne-stely</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/wswayneee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -80,7 +80,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide font-medium">GitHub</p>
-                    <p className="text-sm font-semibold text-primary">github.com/yourusername</p>
+                    <p className="text-sm font-semibold text-primary">github.com/wswayneee</p>
                   </div>
                 </a>
               </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/MEE .png";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,10 +21,11 @@ export default function Hero() {
         <img
           src={profileImg}
           alt="Profile"
-          className="absolute right-0 top-0 h-full w-[55%] object-cover object-top"
+          className="absolute right-0 top-[-12%] h-[125%] w-[55%] object-cover object-top brightness-[1.02] contrast-[1.02]"
+          style={{ imageRendering: "auto" }}
         />
-        {/* Gradient overlay: background on left, transparent on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/10" />
+        {/* Gradient overlay: background on left, fully transparent on right face area */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
@@ -36,48 +37,18 @@ export default function Hero() {
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-0.5 bg-accent-blue" />
             <span className="text-sm font-semibold text-accent-blue tracking-widest uppercase">
-              [Your Full Name]
+              Wayne Stely Lamansiang
             </span>
           </div>
 
           {/* Big editorial tagline */}
-          <h1 className="text-6xl md:text-7xl font-extrabold text-primary leading-[1.05] mb-8 tracking-tight">
-            Business<br />
-            <span className="text-accent-blue">Analyst.</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-primary leading-[1.05] mb-8 tracking-tight">
+            Software Engineering <span className="text-accent-blue">Enthusiast.</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg font-medium text-muted-foreground mb-3">
-            Software Engineer · Project Manager
-          </p>
-          <p className="text-base text-muted-foreground leading-relaxed mb-10 max-w-md">
-            Delivering data-driven insights and strategic solutions that bridge business objectives
-            with technical execution to drive measurable organizational growth.
-          </p>
 
-          {/* CTAs */}
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#experience"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center px-7 py-3.5 bg-primary text-primary-foreground font-semibold text-sm rounded-md hover:opacity-90 transition-opacity shadow-sm"
-            >
-              View Experience
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center px-7 py-3.5 border border-primary text-primary font-semibold text-sm rounded-md hover:bg-secondary transition-colors"
-            >
-              Contact Me
-            </a>
-          </div>
+
+
         </div>
       </div>
 
